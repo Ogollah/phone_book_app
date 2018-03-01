@@ -28,8 +28,5 @@ class TestContactsCase(unittest.TestCase):
         response = contact.update_contact(contact)
         self.assertEqual(response['message'], 'Contact updated!')
  
-
-
-    
 if __name__ == '__main__':
        unittest.main()
