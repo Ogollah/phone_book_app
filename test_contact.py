@@ -11,10 +11,28 @@ class TestContactsCase(unittest.TestCase):
         self.assertEqual(response['message'], 'Contact created!')
 
 
+        # test view contact
+    def test_view_contact(self):
+        contact = Contacts()
+        response = contact.create_contact("manu", "0712345678")
+        response = contact.view_contact(contact)
+        self.assertEqual(response, {'name':"manu", 'phon_num':"0712345678"})
+
+
     def test_delete_contact(self):
         contact = Contacts()
-        response = contact.delet_contact(contact)
+        response = contact.delete_contact(contact)
         self.assertEqual(response['message'], 'Contact deleted!')
 
+
+
+
+
+        #test update contact
+    def test_update_contact(self):
+        pass
+
+
+    
 if __name__ == '__main__':
        unittest.main()

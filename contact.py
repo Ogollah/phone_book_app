@@ -19,8 +19,16 @@ class Contacts(object):
         return {"message": "Contact created!"}
 
 
-    #delete contact
-    def delet_contact(self, contact):
+    def view_contact(self, contact):
+        for contact in self.contact_list:
+            return contact
+
+        #delete function
+    def delete_contact(self, contact):
         if contact in self.contact_list:
             self.contact_list.remove(contact)
         return {'message':'Contact deleted!'}
+
+
+
+        
