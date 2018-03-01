@@ -11,6 +11,10 @@ class TestContactsCase(unittest.TestCase):
         self.assertEqual(response['message'], 'Contact created!')
 
 
+    def test_delete_contact(self):
+        contact = Contacts()
+        response = contact.delet_contact(contact)
+        self.assertEqual(response['message'], 'Contact deleted!')
 
 if __name__ == '__main__':
        unittest.main()
